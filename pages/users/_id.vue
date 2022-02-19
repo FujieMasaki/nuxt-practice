@@ -12,6 +12,10 @@ export default {
     return {
       message: '/users/_id.vueを表示'
     }
+  },
+  validate({ params }){
+    return /^\d+$/.test(params.id)
+    // パラメーターのidが半角数字かどうかtestメソッドで判定
   }
 }
 </script>
